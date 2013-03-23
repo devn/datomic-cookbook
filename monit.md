@@ -6,7 +6,7 @@ So monit can act like startup system and make sure process is running.
 
 Here is an example of `monitrc` that monitor a transactor and an application process.
 
-```
+```bash
 set daemon 60
 set logfile syslog facility log_daemon
 set idfile /var/.monit.id
@@ -42,13 +42,13 @@ check process myapp with pidfile "/home/myuser/.myapp.pid"
 
 You should specify path of process id file into `transactor.properties`.
 
-```
+```bash
 pid-file=/home/myuser/.datomic.pid
 ```
 
 If you use [datomic-free wrapper](https://github.com/cldwalker/datomic-free), change `start program = ...` line as following.
 
-```
+```bash
       start program = "/bin/su - myuser -c '/home/myuser/.datomic-free/bin/datomic-free start /home/myuser/.datomic-free/transactor.properties'"
 ```
 
