@@ -52,7 +52,7 @@ If you use [datomic-free wrapper](https://github.com/cldwalker/datomic-free), ch
       start program = "/bin/su - myuser -c '/home/myuser/.datomic-free/bin/datomic-free start /home/myuser/.datomic-free/transactor.properties'"
 ```
 
-The reason why I use `su` instead of `as uid myuser and gid mygroup` option is that monit restricts environment variables such as HOME and PATH when invoking commands. 
+The reason why I use `su` instead of `as uid myuser and gid mygroup` [option](http://mmonit.com/monit/documentation/monit.html#configuration_examples) is that monit restricts environment variables such as HOME and PATH when invoking commands. 
 
 You can check syntax validity as following.
 
